@@ -1,0 +1,117 @@
+
+
+
+* {
+    font-family: "Iosevka", monospace;
+    font-weight: 800;
+    font-size: 15px;
+    color: #e0def4;
+}
+
+window#waybar {
+    background: #191724;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 7px;
+    margin: 3px 2px;
+    border-radius: 0px;
+    background: #26233a;
+    color: #9ccfd8;
+    border: none;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    background: #403d52;
+    color: #ffffff;
+    border-bottom: 3px solid #c4a7e7;
+}
+
+#workspaces button:hover {
+    background: #524f67;
+    color: #ffffff;
+}
+
+#workspaces button.urgent {
+    background: #eb6f92;
+    color: #191724;
+}
+
+#custom-playerctl {
+    font-weight: 700;
+    padding: 0 10px;
+    color: #ebbcba;
+}
+
+#wireplumber {
+    color: #9ccfd8;
+    padding: 0 6px;
+}
+
+#wireplumber.muted {
+    color: #6e6a86;
+}
+
+#backlight {
+    color: #f6c177;
+    padding: 0 6px;
+}
+
+#battery {
+    color: #a8d4c5;
+    padding: 0 6px;
+}
+
+#battery.warning {
+    background: #403d32;
+    color: #f6c177;
+}
+
+#battery.critical {
+    background: #eb6f92;
+    color: #191724;
+}
+
+#clock {
+    color: #c4a7e7;
+    padding: 0 10px;
+}
+
+#custom-power {
+    color: #eb6f92;
+    padding: 0 10px;
+}
+
+#custom-launcher {
+    color: #c4a7e7;
+    padding: 0 8px;
+    font-size: 19px;
+}
+
+#tray {
+    color: #e0def4;
+    padding: 0 6px;
+}
+
+tooltip {
+    background: #26233a;
+    border: 1px solid #6e6a86;
+    border-radius: 5px;
+}
+
+tooltip label {
+    color: #e0def4;
+    font-size: 11px;
+}
+
+#custom-sep {
+    color: #444b6a;
+}

@@ -1,0 +1,103 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 4,
+  "margin-top": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+
+  "modules-left": [
+    "custom/launcher",
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "custom/playerctl"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/sep",
+    "wireplumber",
+    "custom/sep",
+    "clock"
+  ],
+
+  "custom/launcher": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "fuzzel"
+  },
+
+  "niri/workspaces": {
+    "format": "{value}",
+    "all-outputs": true,
+    "sort-by-name": true,
+    "disable-click": false,
+    "current-only": false
+  },
+
+  "custom/playerctl": {
+    "format": "{}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "Playing": "",
+      "Paused": "Arch (btw)"
+    },
+    "exec": "playerctl -a -F metadata --format '{\"text\": \"{{artist}} - {{title}}\", \"alt\": \"{{status}}\", \"tooltip\": \"{{player}}: {{markup_escape(title)}} - {{markup_escape(artist)}}\"}'",
+    "on-click": "playerctl play-pause"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10
+  },
+
+  "wireplumber": {
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": " 󰝟 muted ",
+    "on-click": "pavucontrol",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"],
+      "headphones": "󰋋",
+      "headset": "󰋎"
+    }
+  },
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": " {icon} {percent}% ",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": " 󰂄 {capacity}% ",
+    "format-plugged": " 󱟦 {capacity}% ",
+    "format-full": " 󰁹 {capacity}% ",
+    "format-icons": [
+      "󰂎", "󰁺", "󰁻", "󰁼", "󰁽",
+      "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+    ]
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip": true
+  },
+
+  "custom/power": {
+    "format": "󰓥",
+    "tooltip": false,
+    "on-click": "wlogout"
+  },
+
+  "custom/sep": {
+    "format" : "|",
+    "interval" : 0
+  }
+}
